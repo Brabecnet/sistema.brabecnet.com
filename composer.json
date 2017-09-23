@@ -1,0 +1,14 @@
+{
+    "name": "brabecnet/sistema-brabecnet-com",
+    "description": "Main Website for Brabecnet Serviços de Comunicação Multimídia LTDA",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Aryel Mota Góis",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    }
+}
