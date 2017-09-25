@@ -21,5 +21,5 @@ Brazil.
 # TODO
 
 - [ ] Web interface
-- [ ] include aryelgois\\bank-interchange
+- [ ] include aryelgois/bank-interchange
 - [ ] _add more TODOs_

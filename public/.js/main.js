@@ -1,7 +1,7 @@
 /**
  * Website core object
  *
- * @param object context aryelgois.utils.keyboard
+ * @param object context app.main
  */
 (function (context) {
     /**
