@@ -1,0 +1,211 @@
+/*
+ * body
+ */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: table;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  line-height: 1.5em;
+  position: relative;
+  transition: font-size 0.3s;
+  width: 100%;
+    min-width: 280px;
+}
+
+
+/*
+ * header
+ */
+
+body > header {}
+
+body > header > div {
+  background: #eaeaea;
+  border-bottom: 0.25em solid #6579b2;
+}
+
+#header-menu-btn {
+  cursor: pointer;
+  display: block;
+  padding: 1em 0.5em;
+  position: absolute;
+}
+
+#header-menu-btn i {
+  color: #6579b2;
+  display: block;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+#header-menu-btn i:hover {
+  color: #1f1063;
+}
+#header-menu-btn i:active {
+  background: #ccc;
+}
+
+body > header img {
+  display: block;
+  height: 5em;
+  margin: 0 auto;
+  padding: 1.5em 0;
+  width: auto;
+}
+
+
+/*
+ * main
+ */
+
+body > main {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+body > main > noscript {
+  background: #fec;
+  border-color: #fca;
+  border-style: solid;
+  border-width: 1px 4px;
+  display: block;
+  padding: 4px;
+  text-align: center;
+}
+
+main > section > h1 {
+  font-size: 2em;
+  margin: 0;
+  padding: 0.5em 0.25em;
+}
+
+main > section > article {
+  padding: 0.5em;
+}
+
+
+/*
+ * aside
+ */
+
+body > aside {}
+
+body > aside > nav {
+  background: #ddd;
+  display: none;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  position: relative;
+    left: -100%;
+}
+body > aside > nav.selected {
+  left: 0;
+  display: block;
+}
+
+
+/*
+ * footer
+ */
+
+body > footer {
+  background: #c0c0c0;
+  color: #444;
+  display: table-row;
+  height: 1px;
+}
+
+body > footer > div {
+  padding: 0.5em;
+}
+
+
+/*
+ * Mini screen
+ */
+
+@media screen and (min-width: 420px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+
+/*
+ * Small screen
+ */
+
+@media screen and (max-width: 639px) {
+  .big-screen {
+    display: none !important;
+  }
+
+  body > header {
+    display: table-row;
+    height: 1px;
+  }
+
+  body > aside {
+    background: rgba(0,0,0,0.25);
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+      top: 0;
+      left: 0;
+    transition: opacity 0.5s;
+    visibility: hidden;
+    width: 100%;
+  }
+  body > aside.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  body > aside > nav {
+    width: 80%;
+  }
+}
+
+
+/*
+ * Big screen
+ */
+
+@media screen and (min-width: 640px) {
+  .small-screen {
+    display: none !important;
+  }
+
+  body {
+    font-size: 16px;
+    padding-left: 240px;
+  }
+
+  body > header {
+    position: fixed;
+      top: 0;
+      left: 0;
+    width: 240px;
+    z-index: 1;
+  }
+
+  main > section > h1 {
+    padding-bottom: 0.625em;
+  }
+
+  body > aside {
+    height: 100%;
+    padding-top: 5.25em;
+    position: fixed;
+      top: 0;
+      left: 0;
+    width: 240px;
+  }
+}

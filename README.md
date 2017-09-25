@@ -16,3 +16,10 @@ Source code for https://sistema.brabecnet.com/ _not online yet_
 This website controls the administrative system for the internet provider
 _Brabecnet Serviços de Comunicação Multimídia LTDA_, in the State of Sergipe,
 Brazil.
+
+
+# TODO
+
+- [ ] Web interface
+- [ ] include aryelgois\\bank-interchange
+- [ ] _add more TODOs_

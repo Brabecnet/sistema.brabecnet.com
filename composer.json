@@ -9,6 +9,21 @@
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "aryelgois/utils": "dev-master",
+        "aryelgois/objects": "dev-master",
+        "aryelgois/bank-interchange": "dev-master",
+        "aryelgois/utils-js": "dev-master",
+        "catfan/Medoo": "^1.4",
+        "twig/twig": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brabecnet\\Sites\\Sistema\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "bin/composer-post-install.php",
+        "post-update-cmd": "bin/composer-post-install.php"
     }
 }

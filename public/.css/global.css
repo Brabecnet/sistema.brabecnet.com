@@ -1,0 +1,192 @@
+/*
+ * General selectors
+ */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a, div, i, img, input, label, li, p, select, span, textarea {
+  transition: background 0.4s, border 0.4s, color 0.4s;
+}
+
+
+/*
+ * Element selectors
+ */
+
+a:link, a:visited {
+  color: #0e89de;
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+a.light:link, a.light:visited {
+  color: #eee;
+}
+a.medium:link, a.medium:visited {
+  color: #888;
+}
+a.dark:link, a.dark:visited, label.dark {
+  color: #5e5e5e;
+}
+
+
+blockquote {
+  background: rgba(0,0,0,0.05);
+  border-left: 0.5em solid rgba(0,0,0,0.1);
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: 1em 2em;
+  padding: 0.5em 1em 0.5em 2em;
+}
+
+blockquote blockquote {
+  font-size: inherit;
+}
+
+
+code, pre, .sourcecode {
+  background: #fcfcfc;
+  border: 1px solid #ddd;
+  color: #333;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  padding: 0.1em;
+}
+
+blockquote code, pre code {
+  font-size: inherit;
+}
+
+pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.5em;
+  margin: 0.8em 0;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+
+hr {
+  background: #ddd;
+    background-image: linear-gradient(to right, #eee, #ccc, #eee);
+  border: 0;
+  height: 1px;
+  margin: 1.25em 0;
+}
+
+
+optgroup option {
+  padding-left: 20px;
+}
+
+
+p:first-child {
+  margin-top: 0;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+
+small {
+  color: #444;
+  line-height: 1.333em;
+}
+
+
+table, table > tr, table > tr > td {
+  border-collapse: collapse;
+}
+table.full {
+  height: 100%;
+  width: 100%;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.grid > li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+ul.list {
+  list-style-type: square;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+ul.list > li + li {
+  margin-top: 1.333em;
+}
+
+
+/*
+ * Class selectors
+ */
+
+.hidden {
+ display: none !important;
+ -webkit-appearance: none !important;
+}
+
+
+.noclicks {
+  pointer-events: none;
+}
+.noclicks.childrenclicks > * {
+  pointer-events:auto;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+
+.table, .columns {
+  display: table;
+  width: 100%;
+}
+
+.table > * {
+  display: table-row;
+}
+
+.table > * > *, .columns > * {
+  display: table-cell;
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
