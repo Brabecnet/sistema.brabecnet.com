@@ -23,7 +23,6 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "bin/composer-post-install.php",
-        "post-update-cmd": "bin/composer-post-install.php"
+        "post-install-cmd": "aryelgois\\Utils\\PublicVendor::postInstall"
     }
 }

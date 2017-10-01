@@ -1,0 +1,12 @@
+{
+    "vendors": {
+        "vendor-js": "public/.js/vendor"
+    },
+    "map": [
+        {
+            "source": "aryelgois/utils-js/src",
+            "vendor": "vendor-js",
+            "destiny": "aryelgois/utils"
+        }
+    ]
+}
