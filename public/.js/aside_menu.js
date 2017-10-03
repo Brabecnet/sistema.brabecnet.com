@@ -25,7 +25,7 @@
     }
 
     /**
-     * On small screen, hides aside menu when user clicks outside nav elements
+     * Hides aside menu when user clicks outside nav elements (small screen)
      *
      * @param object event jQuery event
      */
@@ -36,7 +36,7 @@
     }
 
     /**
-     * On small screen, toggles aside menu
+     * Toggles aside menu (small screen)
      */
     function asideToggleVisible() {
         root.toggleClass('visible');
