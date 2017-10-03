@@ -52,7 +52,6 @@
         if (!next.length || next.is(current) || root.is('.slide-lock')) {
             return;
         }
-
         stack.push(current);
 
         root.addClass('slide-lock');
