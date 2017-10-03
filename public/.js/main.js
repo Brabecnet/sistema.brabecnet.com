@@ -5,17 +5,23 @@
  */
 (function (context) {
     /**
+     * Handles aside menu events
+     */
+    var aside_menu = window.app.aside_menu;
+
+    /**
      * Basic code on app initialization
      */
     function init() {
-        $(document).ready(function () {
-            $('.aside-switch').click(headerMenuButton);
-        });
+        $(window).resize(bodyCanScroll);
+
+        aside_menu.init();
     }
 
-    function headerMenuButton() {
-        $('body > aside').toggleClass('visible');
+    function bodyCanScroll() {
+        var result = $(window).width() < 640 && aside_menu.root.is('.visible');
+        $('body').toggleClass('noscroll', result);
     }
 
-    init();
+    $(document).ready(init);
 })(getNamespace('app.main'));

@@ -18,7 +18,8 @@ $tmp = [
     ],
     'scripts' => [
         'vendor/aryelgois/utils/namespace',
-        'main',
+        'aside_menu',
+        'main'
     ]
 ];
 

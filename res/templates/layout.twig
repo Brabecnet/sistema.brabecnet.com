@@ -17,7 +17,7 @@
 <body>
     <header>
         <div>
-            <div id="header-menu-btn" class="aside-switch small-screen"><i class="icon-navicon"></i></div>
+            <span id="header-menu-btn" class="small-screen" data-action="aside-toggle"><i class="icon-navicon"></i></span>
             <img alt="Brabecnet" src="/.res/logo/horizontal.png" />
         </div>
     </header>
@@ -36,12 +36,7 @@
 {% endblock %}
     </main>
     <aside>
-        <nav class="selected" data-name="menu-global">
-            <span class="aside-switch small-screen"><i class="icon-close"></i> Fechar</span>
-            <ul>
-                <li>Menu</li>
-            </ul>
-        </nav>
+{% include 'aside_menu.twig' %}
     </aside>
     <footer>
         <div>
