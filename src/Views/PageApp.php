@@ -17,10 +17,21 @@ class PageApp extends View
         // set template
         $this->twig_template = 'pages/app.twig';
 
-        // add stylesheets
-        $this->twig_data['stylesheets'][] = 'page_app';
-
-        // add scripts
-        array_push($this->twig_data['scripts'], 'aside_menu', 'main');
+        // add template data
+        $this->twig_data = array_merge_recursive(
+            $this->twig_data,
+            [
+                'stylesheets'=> [
+                    'page_app',
+                    'modal',
+                ],
+                'scripts' => [
+                    'aside_menu',
+                    'main',
+                    'modal',
+                    'templates',
+                ]
+            ]
+        );
     }
 }
