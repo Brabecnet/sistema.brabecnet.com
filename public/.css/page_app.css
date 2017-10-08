@@ -42,22 +42,16 @@ body > header > div {
  */
 
 body > main > noscript {
-  background: #fec;
-  border-color: #fca;
-  border-style: solid;
-  border-width: 1px 4px;
   display: block;
-  padding: 4px;
-  text-align: center;
 }
 
-main > section > h1 {
+body > main > * > h1 {
   font-size: 2em;
   margin: 0;
-  padding: 0.5em 0.25em;
+  padding: 0.5em 0.25em 0.625em;
 }
 
-main > section > article {
+body > main > * > article {
   padding: 0.5em;
 }
 
