@@ -7,15 +7,27 @@
     /**
      * Handles aside menu events
      */
-    var aside_menu = window.app.aside_menu;
+    var aside_menu;
+
+    /**
+     * Handles modal pages
+     */
+    var modal;
 
     /**
      * Object initialization
      */
     function init() {
+        /*
+         * Load dependencies
+         */
+        aside_menu = window.app.aside_menu;
+        modal = window.app.modal;
+
         $(window).resize(bodyCanScroll);
 
         aside_menu.init();
+        modal.init();
     }
 
     /**
