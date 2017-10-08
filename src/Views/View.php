@@ -76,7 +76,6 @@ abstract class View
             ],
             'scripts' => [
                 'vendor/aryelgois/utils/namespace',
-                'form_handler'
             ]
         ];
 
