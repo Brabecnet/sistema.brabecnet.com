@@ -14,12 +14,13 @@
         "aryelgois/objects": "dev-master",
         "aryelgois/bank-interchange": "dev-master",
         "aryelgois/utils-js": "dev-master",
+        "aryelgois/gump": "dev-master",
         "catfan/Medoo": "^1.4",
         "twig/twig": "^2.4"
     },
     "autoload": {
         "psr-4": {
-            "Brabecnet\\Sites\\Sistema\\": "src/"
+            "App\\": "src/"
         }
     },
     "scripts": {

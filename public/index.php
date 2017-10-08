@@ -1,27 +1,24 @@
 <?php
 
-$root = realpath(__DIR__ . '/..');
+define('APP_ROOT', realpath(__DIR__ . '/..'));
 
-require_once $root . '/vendor/autoload.php';
+require_once APP_ROOT . '/vendor/autoload.php';
 
-$loader = new Twig_Loader_Filesystem($root . '/res/templates');
-$twig = new Twig_Environment($loader, array(
-    'cache' => $root . '/cache',
-    'debug' => true
-));
+use App;
 
-$tmp = [
-    'stylesheets' => [
-        'global',
-        'layout',
-        'icomoon'
-    ],
-    'scripts' => [
-        'vendor/aryelgois/utils/namespace',
-        'aside_menu',
-        'main'
-    ]
-];
+// debug
+ini_set('display_errors', 'On');
+error_reporting(E_ALL | E_STRICT);
 
-$template = $twig->load('layout.twig');
-$template->display($tmp);
+session_start();
+
+// protect from inactivity
+if (isset($_SESSION['stamp']) && date('U') - $_SESSION['stamp'] > 1800) {
+    $_SESSION = [];
+}
+$_SESSION['stamp'] = date('U');
+
+// check if is logged in
+$page = (isset($_SESSION['user']))
+    ? new App\Controllers\PageApp()
+    : new App\Controllers\PageLogin();

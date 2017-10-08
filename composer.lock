@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2443dfef4fc3a8432a847725af3bde85",
+    "content-hash": "b6c396499e791bdaa92c960b7b0daaf4",
     "packages": [
         {
             "name": "aryelgois/bank-interchange",
@@ -53,6 +53,50 @@
                 "ticket"
             ],
             "time": "2017-09-23T13:38:16+00:00"
+        },
+        {
+            "name": "aryelgois/gump",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aryelgois/GUMP.git",
+                "reference": "dcf4b7d713b1f5312e7a1f2d7ade437e26f69a78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aryelgois/GUMP/zipball/dcf4b7d713b1f5312e7a1f2d7ade437e26f69a78",
+                "reference": "dcf4b7d713b1f5312e7a1f2d7ade437e26f69a78",
+                "shasum": ""
+            },
+            "require": {
+                "aryelgois/utils": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "aryelgois\\Gump\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sean Nieuwoudt",
+                    "homepage": "https://wixelhq.com"
+                },
+                {
+                    "name": "Filis Futsarov",
+                    "homepage": "https://filis.me"
+                },
+                {
+                    "name": "Aryel Mota Góis"
+                }
+            ],
+            "description": "A fast & extensible PHP input validation class that allows you to validate any data",
+            "homepage": "https://github.com/aryelgois/GUMP",
+            "time": "2017-10-08T03:35:15+00:00"
         },
         {
             "name": "aryelgois/objects",
@@ -321,16 +365,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2"
+                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eab7c3288ae6603d7d6f92b531626af2b162d1f2",
-                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eddb97148ad779f27e670e1e3f19fb323aedafeb",
+                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
                 "shasum": ""
             },
             "require": {
@@ -383,7 +427,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-06-07T18:47:58+00:00"
+            "time": "2017-09-27T18:10:31+00:00"
         },
         {
             "name": "vria/nodiacritic",
@@ -441,7 +485,8 @@
         "aryelgois/utils": 20,
         "aryelgois/objects": 20,
         "aryelgois/bank-interchange": 20,
-        "aryelgois/utils-js": 20
+        "aryelgois/utils-js": 20,
+        "aryelgois/gump": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

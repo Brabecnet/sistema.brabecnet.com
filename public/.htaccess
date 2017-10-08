@@ -1,5 +1,13 @@
 Options -Indexes
+Options +FollowSymLinks
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^.*$ /index.php [NE,L]
 
 <FilesMatch ".(htm|html|php|css|js)$">
-  AddDefaultCharset UTF-8
+    AddDefaultCharset UTF-8
 </FilesMatch>

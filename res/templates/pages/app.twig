@@ -1,0 +1,26 @@
+{% extends 'pages/skeleton.twig' %}
+
+{% block body %}
+    <header>
+        <div>
+            <span id="header-menu-btn" class="small-screen" data-action="aside-toggle"><i class="icon-navicon"></i></span>
+            <img alt="Brabecnet" src="/.res/logo/horizontal.png" />
+        </div>
+    </header>
+    <main>
+        <noscript>
+            <h1>Precisamos de JavaScript</h1>
+            <article>
+                {{ noscript|trim|indent(4) }}
+            </article>
+        </noscript>
+    </main>
+    <aside>
+{% include 'aside_menu.twig' %}
+    </aside>
+    <footer>
+        <div>
+            Copyright {{ copyright_short|raw }}
+        </div>
+    </footer>
+{% endblock %}

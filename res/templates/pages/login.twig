@@ -1,0 +1,33 @@
+{% extends 'pages/skeleton.twig' %}
+
+{% block body %}
+    <header>
+        <img alt="Brabecnet" src="/.res/logo/horizontal.png" />
+    </header>
+    <main>
+        <div id="form-login-wrapper">
+            <form id="form-login" class="shadow-small" method="POST">
+                <h2 align="center">{{ form.title }}</h2>
+                <p>{{ form.text }}</p>
+                <label>Documento (CPF/CNPJ):<br /><input name="document" maxlength="18" pattern="(\d{3}[\.-]?\d{3}[\.-]?\d{3}[\.-]?\d{2}|\d{2}[\.-]?\d{3}[\.-]?\d{3}[/\.-]?\d{4}[\.-]?\d{2})" required /></label>
+                <label>Senha:<br /><input name="password" type="password" minlength="6" maxlength="60" required /></label>
+                <br />
+                <button>Entrar <i class="icon-sign-in"></i></button>
+                <br />
+                <a href="/esqueci">Esqueci meus dados</a>
+            </form>
+            <noscript>
+                {{ noscript|trim|indent(4) }}
+            </noscript>
+        </div>
+    </main>
+    <footer>
+        <div>
+            Copyright {{ copyright_short|raw }}
+            <ul class="grid">
+                <li><a href="/termos" class="dark">Termos de uso</a></li> &#183;
+                <li><a href="/politica" class="dark">Política de privacidade</a></li>
+            </ul>
+        </div>
+    </footer>
+{% endblock %}
