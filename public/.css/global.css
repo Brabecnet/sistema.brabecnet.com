@@ -208,3 +208,40 @@ ul.list > li + li {
 .shadow-big {
   box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.25);
 }
+
+@keyframes rotate360 {
+  from {
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Safari */
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: rotate360 0.75s linear infinite;
+  opacity: 0.6;
+  display: inline-block;
+  transition: 0.2s opacity;
+}
+
+.spinner-hurry {
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation-duration: 0.6s;
+  opacity: 0.7;
+}
+
+.spinner-slow {
+  animation-timing-function: cubic-bezier(0.77, 0, 0.18, 1);
+  animation-duration: 1s;
+  opacity: 0.5;
+}
+
+.spinner-pause {
+  animation-play-state: paused;
+  opacity: 0.3;
+}

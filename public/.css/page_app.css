@@ -41,8 +41,8 @@ body > header > div {
  * main
  */
 
-body > main > noscript {
-  display: block;
+body > main > * {
+  display: table-cell;
 }
 
 body > main > * > h1 {
