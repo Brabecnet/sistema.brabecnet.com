@@ -18,9 +18,12 @@ class PageLogin
             $view = new App\Views\PageLogin();
         } else {
             $form = new App\Models\Forms\Login($_POST);
-            $view = ($form->checkLogin())
-                ? new App\Views\PageApp()
-                : new App\Views\PageLogin($form);
+            if ($form->checkLogin()) {
+                header('Location: .');
+                die();
+            } else {
+                $view = new App\Views\PageLogin($form);
+            }
         }
         $view->output();
     }
