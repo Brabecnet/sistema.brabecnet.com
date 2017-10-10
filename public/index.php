@@ -19,6 +19,13 @@ if (isset($_SESSION['stamp']) && date('U') - $_SESSION['stamp'] > 1800) {
 $_SESSION['stamp'] = date('U');
 
 // check if is logged in
-$page = (isset($_SESSION['user']))
-    ? new App\Controllers\PageApp()
-    : new App\Controllers\PageLogin();
+if (isset($_SESSION['user'])) {
+    $uri = ltrim($_SERVER['REQUEST_URI'], '/');
+    if (strpos($uri, 'modal/') === 0) {
+        new App\Controllers\Modal($uri);
+    } else {
+        new App\Controllers\PageApp();
+    }
+} else {
+    new App\Controllers\PageLogin();
+}

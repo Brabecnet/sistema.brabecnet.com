@@ -27,7 +27,29 @@
          * Prepare root
          */
         root.empty();
-        loadTemplate('spinner');
+        var spinner = loadTemplate('spinner');
+
+        /*
+         * Load Home
+         */
+        request('home', null, {
+            done: function () {
+                spinner.remove();
+            }
+        });
+    }
+
+    /**
+     * ...
+     */
+    function create(name, content) {
+        var el = $('<section class="modal-' + name + '">')
+            .append(content)
+            .appendTo(root);
+
+        change(el);
+
+        return el;
     }
 
     /**
@@ -40,16 +62,55 @@
      */
     function loadTemplate(template, options) {
         var tmp = templates.output(template, options),
-            el = $('<section class="modal-' + template + '">').append(tmp);
+            el = create(template, tmp);
 
-        root.append(el);
         return el;
     }
 
     /**
      * ...
      */
-    function load(modal, options) {
+    function request(modal, data, callbacks) {
+        if (typeof data === 'undefined') {
+            data = null;
+        }
+
+        var el;
+
+        var ajax = $.post('/modal/' + modal, data)
+            .done(function (result) {
+                el = create(modal, result);
+            })
+            .fail(function (result) {
+                console.log('ERROR:', result);
+            });
+
+        if (typeof callbacks === 'object') {
+            if (callbacks.hasOwnProperty('done')) {
+                ajax.done(callbacks.done);
+            }
+            if (callbacks.hasOwnProperty('fail')) {
+                ajax.fail(callbacks.fail);
+            }
+            if (callbacks.hasOwnProperty('always')) {
+                ajax.always(callbacks.always);
+            }
+        }
+
+        return el;
+    }
+
+    /**
+     * ...
+     */
+    function change(next) {
+        // code...
+    }
+
+    /**
+     * ...
+     */
+    function replace(previous, next) {
         // code...
     }
 
@@ -58,4 +119,6 @@
      */
     context.root = root;
     context.init = init;
+    context.request = request;
+    context.loadTemplate = loadTemplate;
 })(getNamespace('app.modal'));
