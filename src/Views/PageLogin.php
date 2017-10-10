@@ -33,7 +33,17 @@ class PageLogin extends View
         // set template
         $this->twig_template = 'pages/login.twig';
 
-        // add stylesheets
-        $this->twig_data['stylesheets'][] = 'page_login';
+        // add template data
+        $this->twig_data = array_merge_recursive(
+            $this->twig_data,
+            [
+                'stylesheets'=> [
+                    'page_login',
+                ],
+                'scripts' => [
+                    'login',
+                ]
+            ]
+        );
     }
 }
