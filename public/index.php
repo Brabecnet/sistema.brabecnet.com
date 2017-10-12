@@ -20,12 +20,7 @@ $_SESSION['stamp'] = date('U');
 
 // check if is logged in
 if (isset($_SESSION['user'])) {
-    $uri = ltrim($_SERVER['REQUEST_URI'], '/');
-    if (strpos($uri, 'modal/') === 0) {
-        new App\Controllers\Modal($uri);
-    } else {
-        new App\Controllers\PageApp();
-    }
+    new App\Controllers\PageApp();
 } else {
     new App\Controllers\PageLogin();
 }

@@ -31,7 +31,7 @@ class PageLogin extends View
         }
 
         // set template
-        $this->twig_template = 'pages/login.twig';
+        $this->twig_template = 'page_login.twig';
 
         // add template data
         $this->twig_data = array_merge_recursive(

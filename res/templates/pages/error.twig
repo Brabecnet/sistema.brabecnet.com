@@ -1,0 +1,10 @@
+{% extends is_modal ? 'modal.twig' : 'page_app.twig' %}
+
+{% block modal %}
+        <section class="modal-error">
+            <h1>Erro {{ error.title }}</h1>
+            <article>
+                ...
+            </article>
+        </section>
+{% endblock %}
