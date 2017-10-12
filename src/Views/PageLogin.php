@@ -41,6 +41,7 @@ class PageLogin extends View
                     'page_login',
                 ],
                 'scripts' => [
+                    'vendor/aryelgois/utils/auto_focus',
                     'login',
                 ]
             ]

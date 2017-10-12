@@ -180,12 +180,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aryelgois/utils-js.git",
-                "reference": "3771a270c6b2e748986522e49231b903c456f386"
+                "reference": "c3924693cfe3d014d810e44e1de2003d202e978d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aryelgois/utils-js/zipball/3771a270c6b2e748986522e49231b903c456f386",
-                "reference": "3771a270c6b2e748986522e49231b903c456f386",
+                "url": "https://api.github.com/repos/aryelgois/utils-js/zipball/c3924693cfe3d014d810e44e1de2003d202e978d",
+                "reference": "c3924693cfe3d014d810e44e1de2003d202e978d",
                 "shasum": ""
             },
             "type": "library",
@@ -204,7 +204,7 @@
                 "javascript",
                 "utils"
             ],
-            "time": "2017-09-25T01:34:24+00:00"
+            "time": "2017-10-12T02:08:35+00:00"
         },
         {
             "name": "catfan/medoo",
