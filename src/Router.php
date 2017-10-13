@@ -15,18 +15,18 @@ class Router
         $uri = trim(explode('?', $_SERVER['REQUEST_URI'], 2)[0], '/');
         $route = array_values(array_filter(explode('/', $uri), 'strlen'));
         if (empty($route)) {
-            $route = ['home'];
+            $route = ['inicio'];
         }
 
         $options = [];
         $is_modal = isset($_GET['modal']);
 
         switch ($route[0]) {
-            case 'home':
+            case 'inicio':
                 $page = 'Home';
                 break;
 
-            case 'error':
+            case 'erro':
                 $page = 'Error';
                 $options = [
                     'http_code' => $route[1] ?? null,
