@@ -20,7 +20,7 @@ $_SESSION['stamp'] = date('U');
 
 // check if is logged in
 if (isset($_SESSION['user'])) {
-    new App\Controllers\PageApp();
+    new App\Router();
 } else {
-    new App\Controllers\PageLogin();
+    new App\Controllers\Pages\Login();
 }

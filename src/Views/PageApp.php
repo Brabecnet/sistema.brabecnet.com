@@ -10,7 +10,7 @@ class PageApp extends View
     /**
      * ...
      */
-    public function __construct($view_name, $is_modal)
+    public function __construct($is_modal, $view_name, $view_data = [])
     {
         parent::__construct();
 
@@ -32,7 +32,8 @@ class PageApp extends View
                     'modal',
                     'templates',
                 ]
-            ]
+            ],
+            $view_data
         );
     }
 }

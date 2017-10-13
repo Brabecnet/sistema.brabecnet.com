@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Pages;
 
 use App;
 
 /**
  * ...
  */
-class PageLogin
+class Login
 {
     /**
      * ...
