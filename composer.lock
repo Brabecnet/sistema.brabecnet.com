@@ -141,12 +141,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aryelgois/utils.git",
-                "reference": "47a1656140c274daca2fdb4646b83c0e29899bc6"
+                "reference": "8057e8042d6ebe25c5921795de85b3b325d79e3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aryelgois/utils/zipball/47a1656140c274daca2fdb4646b83c0e29899bc6",
-                "reference": "47a1656140c274daca2fdb4646b83c0e29899bc6",
+                "url": "https://api.github.com/repos/aryelgois/utils/zipball/8057e8042d6ebe25c5921795de85b3b325d79e3f",
+                "reference": "8057e8042d6ebe25c5921795de85b3b325d79e3f",
                 "shasum": ""
             },
             "require": {
@@ -172,7 +172,7 @@
             "keywords": [
                 "utils"
             ],
-            "time": "2017-10-01T18:24:50+00:00"
+            "time": "2017-10-14T02:24:20+00:00"
         },
         {
             "name": "aryelgois/utils-js",

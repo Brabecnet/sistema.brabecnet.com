@@ -2,6 +2,8 @@
 
 namespace App;
 
+use aryelgois\Utils\Utils;
+
 /**
  * ...
  */
@@ -24,6 +26,36 @@ class Router
         switch ($route[0]) {
             case 'inicio':
                 $page = 'Home';
+                break;
+
+            case 'pessoas':
+                $page = 'People';
+                $options = [
+                    'action' => $route[1] ?? null,
+                ];
+                break;
+
+            case 'perfil':
+                $page = 'Profile';
+                $person = $_SESSION['user']->getId();
+                $action = null;
+
+                if (isset($route[1])) {
+                    if (Utils::isDigit($route[1])) {
+                        if ($route[1] == $person) {
+                            // redirect to '/perfil' or "/perfil/$route[2]"
+                        }
+                        $person = $route[1];
+                        $action = $route[2] ?? null;
+                    } else {
+                        $action = $route[1];
+                    }
+                }
+
+                $options = [
+                    'person' => $person,
+                    'action' => $action,
+                ];
                 break;
 
             case 'erro':
