@@ -10,12 +10,11 @@
     ],
     "require": {
         "php": "^7.0",
-        "aryelgois/utils": "dev-master",
-        "aryelgois/objects": "dev-master",
-        "aryelgois/bank-interchange": "dev-master",
+        "aryelgois/utils": "^0.2",
+        "aryelgois/medools": "^2.0",
+        "aryelgois/bank-interchange": "dev-develop",
         "aryelgois/utils-js": "dev-master",
-        "aryelgois/gump": "dev-master",
-        "catfan/Medoo": "^1.4",
+        "aryelgois/gump": "dev-aryelgois",
         "twig/twig": "^2.4"
     },
     "autoload": {

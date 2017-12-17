@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b6c396499e791bdaa92c960b7b0daaf4",
+    "content-hash": "e9789321d161b4a444efc013b2999de2",
     "packages": [
         {
             "name": "aryelgois/bank-interchange",
-            "version": "dev-master",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aryelgois/bank-interchange.git",
-                "reference": "cab7d9dc5ee4378b19e8d17f61cbf284ecf5bbc3"
+                "reference": "19d4778da467ba8bb04eceaf821c5e9c7c0f9fa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aryelgois/bank-interchange/zipball/cab7d9dc5ee4378b19e8d17f61cbf284ecf5bbc3",
-                "reference": "cab7d9dc5ee4378b19e8d17f61cbf284ecf5bbc3",
+                "url": "https://api.github.com/repos/aryelgois/bank-interchange/zipball/19d4778da467ba8bb04eceaf821c5e9c7c0f9fa8",
+                "reference": "19d4778da467ba8bb04eceaf821c5e9c7c0f9fa8",
                 "shasum": ""
             },
             "require": {
-                "aryelgois/objects": "dev-master",
-                "aryelgois/utils": "dev-master",
+                "aryelgois/medools": "^2.0",
+                "aryelgois/utils": "^0.2",
                 "php": "^7.0",
                 "setasign/fpdf": "^1.8",
                 "vria/nodiacritic": "0.*"
@@ -52,24 +52,24 @@
                 "febraban",
                 "ticket"
             ],
-            "time": "2017-09-23T13:38:16+00:00"
+            "time": "2017-12-12T13:48:28+00:00"
         },
         {
             "name": "aryelgois/gump",
-            "version": "dev-master",
+            "version": "dev-aryelgois",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aryelgois/GUMP.git",
-                "reference": "dcf4b7d713b1f5312e7a1f2d7ade437e26f69a78"
+                "reference": "895dc818dc978f59f3715918341ffdc534db38d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aryelgois/GUMP/zipball/dcf4b7d713b1f5312e7a1f2d7ade437e26f69a78",
-                "reference": "dcf4b7d713b1f5312e7a1f2d7ade437e26f69a78",
+                "url": "https://api.github.com/repos/aryelgois/GUMP/zipball/895dc818dc978f59f3715918341ffdc534db38d8",
+                "reference": "895dc818dc978f59f3715918341ffdc534db38d8",
                 "shasum": ""
             },
             "require": {
-                "aryelgois/utils": "dev-master"
+                "aryelgois/utils": "^0.2"
             },
             "type": "library",
             "autoload": {
@@ -96,30 +96,31 @@
             ],
             "description": "A fast & extensible PHP input validation class that allows you to validate any data",
             "homepage": "https://github.com/aryelgois/GUMP",
-            "time": "2017-10-08T03:35:15+00:00"
+            "time": "2017-12-17T22:10:29+00:00"
         },
         {
-            "name": "aryelgois/objects",
-            "version": "dev-master",
+            "name": "aryelgois/medools",
+            "version": "v2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/aryelgois/objects.git",
-                "reference": "f89c9dbaebc01bac16698e0f825f2e95922601d9"
+                "url": "https://github.com/aryelgois/Medools.git",
+                "reference": "f011521c1c8a092cb6042a0d72dc7b61db158968"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aryelgois/objects/zipball/f89c9dbaebc01bac16698e0f825f2e95922601d9",
-                "reference": "f89c9dbaebc01bac16698e0f825f2e95922601d9",
+                "url": "https://api.github.com/repos/aryelgois/Medools/zipball/f011521c1c8a092cb6042a0d72dc7b61db158968",
+                "reference": "f011521c1c8a092cb6042a0d72dc7b61db158968",
                 "shasum": ""
             },
             "require": {
-                "aryelgois/utils": "dev-master",
+                "aryelgois/utils": "^0.2",
+                "catfan/medoo": "^1.4",
                 "php": "^7.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "aryelgois\\Objects\\": "src/"
+                    "aryelgois\\Medools\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -132,21 +133,25 @@
                     "role": "Developer"
                 }
             ],
-            "description": "General purpose instantiable classes",
-            "time": "2017-09-11T19:25:34+00:00"
+            "description": "Wrapper on catfan/Medoo",
+            "keywords": [
+                "database",
+                "medoo"
+            ],
+            "time": "2017-11-18T19:36:58+00:00"
         },
         {
             "name": "aryelgois/utils",
-            "version": "dev-master",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aryelgois/utils.git",
-                "reference": "8057e8042d6ebe25c5921795de85b3b325d79e3f"
+                "reference": "dcd2d5bd5866e4feaa1ad1e1a83c9b4f4217c3b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aryelgois/utils/zipball/8057e8042d6ebe25c5921795de85b3b325d79e3f",
-                "reference": "8057e8042d6ebe25c5921795de85b3b325d79e3f",
+                "url": "https://api.github.com/repos/aryelgois/utils/zipball/dcd2d5bd5866e4feaa1ad1e1a83c9b4f4217c3b0",
+                "reference": "dcd2d5bd5866e4feaa1ad1e1a83c9b4f4217c3b0",
                 "shasum": ""
             },
             "require": {
@@ -172,7 +177,7 @@
             "keywords": [
                 "utils"
             ],
-            "time": "2017-10-14T02:24:20+00:00"
+            "time": "2017-11-19T12:27:56+00:00"
         },
         {
             "name": "aryelgois/utils-js",
@@ -208,16 +213,16 @@
         },
         {
             "name": "catfan/medoo",
-            "version": "v1.4.5",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/catfan/Medoo.git",
-                "reference": "8ee8ae1c4df0fee3822a01333eab88893e548fcc"
+                "reference": "d65fad6c087e5904803e0dfd4e7a984d0eda77ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/catfan/Medoo/zipball/8ee8ae1c4df0fee3822a01333eab88893e548fcc",
-                "reference": "8ee8ae1c4df0fee3822a01333eab88893e548fcc",
+                "url": "https://api.github.com/repos/catfan/Medoo/zipball/d65fad6c087e5904803e0dfd4e7a984d0eda77ef",
+                "reference": "d65fad6c087e5904803e0dfd4e7a984d0eda77ef",
                 "shasum": ""
             },
             "require": {
@@ -231,7 +236,7 @@
                 "ext-pdo_oci8": "For Oracle version 8 database",
                 "ext-pdo_pqsql": "For PostgreSQL database",
                 "ext-pdo_sqlite": "For SQLite database",
-                "ext-pdo_sqlsrv": "For MSSQL database on Windows platform"
+                "ext-pdo_sqlsrv": "For MSSQL database"
             },
             "type": "framework",
             "autoload": {
@@ -263,7 +268,7 @@
                 "sql",
                 "sqlite"
             ],
-            "time": "2017-06-24T14:43:07+00:00"
+            "time": "2017-12-01T14:31:32+00:00"
         },
         {
             "name": "setasign/fpdf",
@@ -306,16 +311,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803"
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
-                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
                 "shasum": ""
             },
             "require": {
@@ -327,7 +332,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -361,7 +366,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-06-14T15:44:48+00:00"
+            "time": "2017-10-11T12:05:26+00:00"
         },
         {
             "name": "twig/twig",
@@ -482,8 +487,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "aryelgois/utils": 20,
-        "aryelgois/objects": 20,
         "aryelgois/bank-interchange": 20,
         "aryelgois/utils-js": 20,
         "aryelgois/gump": 20
